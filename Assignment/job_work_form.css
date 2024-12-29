@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.items{
+    display: flex ;
+}
+.in-contractor{
+    display: grid;
+    gap: 10px;
+    width: 100%;
+}
+.in-payment{
+    display: grid;
+    gap: 10px;
+    width: 100%;
+}
+.in-client{
+    display: grid;
+    gap: 10px;
+    width: 100%; 
+}
+.in-schedule{
+    display: grid;
+    gap: 10px;
+    width: 100%;
+}

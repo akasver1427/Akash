@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cart{
+            width: 100%; 
+            border: 1px solid #ccc; 
+            padding: 10px; 
+        }
+        .cart h2{
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .item-count{
+            display: flex; 
+            align-items: center;
+            width: 100px ;
+            justify-content: center;
+            padding: 5px 0 20px 0;
+        }
+        #cart-items{
+            display: flex;
+            justify-content: space-around;
+        }
+        .plus-btn, .minus-btn {
+            padding: 5px 10px; 
+            cursor: pointer; 
+        }
+        #cart-items li{
+            list-style: none;
+            width: 150px ;
+        }
+        #cart-items img{
+            border: 1px solid ;
+            width: 100px ;
+        }
+        .count { margin: 0 10px; }
+    </style>
+</head>
+<body>
+    <div class="cart"> 
+        <h2>Cart items</h2> 
+        <ul id="cart-items"> 
+            <li> 
+                <img src="medium-removebg-preview.png" alt=""> 
+                <div class="item-count"> 
+                    <button class="minus-btn">-</button> 
+                    <span class="count">0</span> 
+                    <button class="plus-btn">+</button>
+                </div>
+            </li>
+            <li> 
+                <img src="medium-removebg-preview.png" alt=""> 
+                <div class="item-count"> 
+                    <button class="minus-btn">-</button> 
+                    <span class="count">0</span> 
+                    <button class="plus-btn">+</button>
+                </div>
+            </li>
+            <li> 
+                <img src="medium-removebg-preview.png" alt=""> 
+                <div class="item-count"> 
+                    <button class="minus-btn">-</button> 
+                    <span class="count">0</span> 
+                    <button class="plus-btn">+</button>
+                </div>
+            </li>
+        </ul>
+        <ul id="cart-items">
+            <li> 
+                <img src="medium-removebg-preview.png" alt=""> 
+                <div class="item-count"> 
+                    <button class="minus-btn">-</button> 
+                    <span class="count">0</span> 
+                    <button class="plus-btn">+</button>
+                </div>
+            </li>
+            <li> 
+                <img src="medium-removebg-preview.png" alt=""> 
+                <div class="item-count"> 
+                    <button class="minus-btn">-</button> 
+                    <span class="count">0</span> 
+                    <button class="plus-btn">+</button>
+                </div>
+            </li>
+            <li> 
+                <img src="medium-removebg-preview.png" alt=""> 
+                <div class="item-count"> 
+                    <button class="minus-btn">-</button> 
+                    <span class="count">0</span> 
+                    <button class="plus-btn">+</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const plusButtons = document.querySelectorAll('.plus-btn'); 
+            const minusButtons = document.querySelectorAll('.minus-btn');
+            plusButtons.forEach(function(button) { 
+                button.addEventListener('click', function() { 
+                    const countElement = this.parentElement.querySelector('.count'); 
+                    let count = parseInt(countElement.textContent); 
+                    countElement.textContent = count + 1; 
+                }); 
+            });
+                    minusButtons.forEach(function(button) { 
+                        button.addEventListener('click', function() { 
+                            const countElement = this.parentElement.querySelector('.count'); 
+                            let count = parseInt(countElement.textContent); 
+                            if (count > 0) { countElement.textContent = count - 1; } 
+                        }); 
+                    }); 
+                });
+    </script>
+</body>
+</html>

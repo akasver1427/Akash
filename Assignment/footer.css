@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'tahoma';
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 250px ;
+    padding: 50px ;
+    position: fixed;
+    bottom: 0;
+    border-bottom: 8px solid green;
+}
+
+.footer-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.footer-logo img{
+    height: 70px ;
+    width: 75px;
+}
+.footer-logo .ftext1{
+    font-size: 18px ;
+    font-weight: 600;
+    letter-spacing: 0.5px ;
+}
+
+.footer-logo .ftext2{
+    font-size: 18px ;
+    font-weight: 600;
+}
+.footer-logo .ftext3{
+    font-size: 8px ;
+    color: darkgreen;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+footer .grids{
+    display: grid;
+    width: 100% ;
+    height: 100%;
+}
+
+footer .grids li{
+    list-style: none;
+    font-size: 12px ;
+    margin-bottom: 5px ;
+    text-transform: capitalize  ;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+footer .grids li:hover{
+    text-decoration: underline;
+}
+
+footer .grids .head{
+    color: green;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+footer .grids .head::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 35px;
+    background: green;
+}
+footer .grids .of{
+    color: green;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+footer .grids .of::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 1.5px;
+    width: 30px;
+    background: green;
+}
+
+.grids .f-child{
+    margin-top: 20px ;
+}
+
+@media (max-width: 940px){
+    footer{
+        padding: 50px 10px;
+    }
+    footer .grids{
+        justify-content: center;
+        border: 1px solid;
+    }
+    .footer-logo{
+        display: none;
+    }
+}
+@media (max-width: 940px){
+    footer .grids li{
+        font-size: 10px ;
+    }
+    footer .grids .head{
+        font-size: 12px ;
+    }
+}
